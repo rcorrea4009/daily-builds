@@ -1,0 +1,35 @@
+[
+  {
+    "day": 1,
+    "slug": "day-01-memory-match",
+    "title": "Memory Match",
+    "category": "Game",
+    "tags": ["JavaScript", "DOM", "CSS"],
+    "description": "A playable card-matching game, pure vanilla JS with no dependencies or build step.",
+    "path": "projects/day-01-memory-match/index.html",
+    "demo": true,
+    "repoPath": "projects/day-01-memory-match"
+  },
+  {
+    "day": 1,
+    "slug": "day-01-library-fines",
+    "title": "Library Fines",
+    "category": "SQL & Testing",
+    "tags": ["SQLite", "Python", "pytest"],
+    "description": "A SQLite schema plus a Python query layer, proven correct with a pytest suite against known seed data.",
+    "path": "projects/day-01-library-fines/README.md",
+    "demo": false,
+    "repoPath": "projects/day-01-library-fines"
+  },
+  {
+    "day": 1,
+    "slug": "day-01-url-shortener",
+    "title": "URL Shortener",
+    "category": "Architecture & Testing",
+    "tags": ["Node.js", "HTTP", "node:test"],
+    "description": "A URL shortener with a strict routes/service/repository split, unit tests and HTTP integration tests, zero npm dependencies.",
+    "path": "projects/day-01-url-shortener/README.md",
+    "demo": false,
+    "repoPath": "projects/day-01-url-shortener"
+  }
+]

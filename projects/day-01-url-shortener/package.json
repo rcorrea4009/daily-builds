@@ -1,0 +1,10 @@
+{
+  "name": "day-01-url-shortener",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Layered-architecture URL shortener, zero npm dependencies.",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}

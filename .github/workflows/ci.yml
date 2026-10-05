@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  python-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run pytest in every project that has a requirements.txt
+        run: |
+          set -e
+          found=0
+          for dir in $(find projects -maxdepth 1 -mindepth 1 -type d); do
+            if [ -f "$dir/requirements.txt" ]; then
+              found=1
+              echo "::group::$dir"
+              pip install -q -r "$dir/requirements.txt"
+              (cd "$dir" && pytest -v)
+              echo "::endgroup::"
+            fi
+          done
+          if [ "$found" -eq 0 ]; then echo "No Python projects found."; fi
+
+  node-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run node --test in every project that has a package.json test script
+        run: |
+          set -e
+          found=0
+          for dir in $(find projects -maxdepth 1 -mindepth 1 -type d); do
+            if [ -f "$dir/package.json" ] && grep -q '"test"' "$dir/package.json"; then
+              found=1
+              echo "::group::$dir"
+              (cd "$dir" && npm test)
+              echo "::endgroup::"
+            fi
+          done
+          if [ "$found" -eq 0 ]; then echo "No Node projects found."; fi
