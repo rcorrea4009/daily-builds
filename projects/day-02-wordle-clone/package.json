@@ -1,0 +1,9 @@
+{
+  "name": "day-02-wordle-clone",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A Wordle-style word game with the guess-evaluation logic unit-tested separately from the DOM.",
+  "scripts": {
+    "test": "node --test"
+  }
+}

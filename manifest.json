@@ -31,5 +31,38 @@
     "path": "projects/day-01-url-shortener/README.md",
     "demo": false,
     "repoPath": "projects/day-01-url-shortener"
+  },
+  {
+    "day": 2,
+    "slug": "day-02-wordle-clone",
+    "title": "Wordle Clone",
+    "category": "Game",
+    "tags": ["JavaScript", "node:test", "DOM"],
+    "description": "A 5-letter word-guessing game whose guess-evaluation logic (including the duplicate-letter edge case) is unit-tested separately from the DOM.",
+    "path": "projects/day-02-wordle-clone/index.html",
+    "demo": true,
+    "repoPath": "projects/day-02-wordle-clone"
+  },
+  {
+    "day": 2,
+    "slug": "day-02-expense-splitter",
+    "title": "Expense Splitter",
+    "category": "SQL & Testing",
+    "tags": ["SQLite", "Python", "pytest"],
+    "description": "A Splitwise-style shared-expense tracker: SQL schema with weighted shares, integer-cents money math, and a greedy settlement algorithm.",
+    "path": "projects/day-02-expense-splitter/README.md",
+    "demo": false,
+    "repoPath": "projects/day-02-expense-splitter"
+  },
+  {
+    "day": 2,
+    "slug": "day-02-rate-limiter",
+    "title": "Rate Limiter",
+    "category": "Architecture & Testing",
+    "tags": ["Python", "Token Bucket", "pytest"],
+    "description": "A token-bucket rate limiter implemented as a pure algorithm, then wired into an HTTP server as middleware, with a fake-clock test suite and a live HTTP integration test.",
+    "path": "projects/day-02-rate-limiter/README.md",
+    "demo": false,
+    "repoPath": "projects/day-02-rate-limiter"
   }
 ]

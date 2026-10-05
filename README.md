@@ -13,6 +13,9 @@ daily-builds/
     day-01-memory-match/        Game: vanilla JS card-matching game
     day-01-library-fines/       SQL + testing: SQLite schema, Python queries, pytest
     day-01-url-shortener/       Architecture + testing: layered Node service, node:test
+    day-02-wordle-clone/        Game: word-guessing game, logic unit-tested separately
+    day-02-expense-splitter/    SQL + testing: shared-expense schema, settlement algorithm
+    day-02-rate-limiter/        Architecture + testing: token-bucket limiter + HTTP middleware
 ```
 
 Adding a new day = adding a new folder under `projects/` and one new entry in `manifest.json`. The site needs no other changes.
@@ -33,6 +36,14 @@ python -m http.server 8000
 | [Memory Match](projects/day-01-memory-match) | Game | DOM state management, no framework |
 | [Library Fines](projects/day-01-library-fines) | SQL & Testing | schema design, SQL aggregation, deterministic pytest tests |
 | [URL Shortener](projects/day-01-url-shortener) | Architecture & Testing | routes/service/repository separation, unit + HTTP integration tests |
+
+## Day 2
+
+| Project | Category | What it proves |
+|---|---|---|
+| [Wordle Clone](projects/day-02-wordle-clone) | Game | isolating hard-to-get-right logic (duplicate letters) from rendering so it's unit-testable |
+| [Expense Splitter](projects/day-02-expense-splitter) | SQL & Testing | integer-cents money math, invariant-based tests, a greedy settlement algorithm |
+| [Rate Limiter](projects/day-02-rate-limiter) | Architecture & Testing | token-bucket algorithm, injected clock for deterministic tests, live HTTP integration test |
 
 ## CI
 

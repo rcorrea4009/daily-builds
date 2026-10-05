@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wordle Clone</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <h1>Wordle Clone</h1>
+    <p class="hint">Guess the 5-letter word in 6 tries.</p>
+    <div id="grid" class="grid"></div>
+    <form id="guessForm">
+      <input id="guessInput" maxlength="5" autocomplete="off" placeholder="apple" autofocus />
+      <button type="submit">Guess</button>
+    </form>
+    <p id="message" class="message"></p>
+    <button id="restart" class="restart hidden">Play again</button>
+  </main>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
